@@ -1,8 +1,20 @@
 package ru.job4j.condition;
 
 public class Max {
-    public static int max(int left, int right) {
-        boolean rsl = left >= right;
-        return rsl ? left : right;
+    public static int max(int first, int second) {
+        boolean rsl = first >= second;
+        return rsl ? first : second;
     }
+
+    public static int max(int first, int second, int third) {
+        return max(first,
+                max(second, third));
+    }
+
+    public static int max(int first, int second, int third, int fourth) {
+        return max(first,
+                max(second,
+                        max(third, fourth)));
+    }
+
 }
